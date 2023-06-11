@@ -1,3 +1,5 @@
+print('# HARSH FIRST SEARCH pathfinding algorithm #')
+
 while True :
 
     x_target = int(input('targets x axis >'))
