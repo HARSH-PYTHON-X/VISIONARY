@@ -1,8 +1,24 @@
 from time import sleep
-from MicroMachinePy import *
 from math import *
 from decimal import *
 import struct
+
+# HELPER functions
+
+def LST_to_STR (lst) :
+    str1 = ""
+ 
+    for ele in lst:
+        str1 += ele
+ 
+    return str1
+
+
+def STR_to_LST (str) :
+    li = list(str.split(" "))
+    return li
+
+# MAIN functions
 
 def encrypt_str (text) :
     to = list(text)
