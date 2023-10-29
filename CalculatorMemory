@@ -1,0 +1,48 @@
+import math
+import numpy
+
+class Memory :
+    def __init__ (self, type = "list") :
+        self.Mem = []
+
+    def add2Memory (self, val) :
+        self.Mem.append(val)
+
+    def ClearMemory (self) :
+        self.Mem.clear()
+
+    def AddAllMemoryValues (self) :
+        sum = 0
+
+        for val in (self.Mem) :
+            sum = sum + val
+
+        return sum 
+    
+    def MultiplyAllMemoryValues (self) :
+        mul = self.Mem[0]
+
+        for ind in range (1, len(self.Mem)) :
+            mul = mul * self.Mem[ind]
+
+        return mul
+
+    def Show (self) :
+        print(self.Mem)
+
+    def MedianOfMemory (self, returnType = "value") :
+        lengthOfMemory = len(self.Mem) 
+
+        print(lengthOfMemory)
+
+        if (lengthOfMemory % 2) == 0 :
+            print(lengthOfMemory / 2)
+
+            return self.Mem[int(lengthOfMemory / 2)]
+        
+        else :
+            ind = int((lengthOfMemory + 1) / 2)
+
+            print(ind)
+            
+            return self.Mem[ind - 1]
